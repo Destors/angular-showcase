@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { RxjsSearch } from '../search-inputs/rxjs-search/rxjs-search';
+import { RxjsSearch } from './rxjs-search/rxjs-search';
+import { SignalSearch } from "./signal-search/signal-search";
 
 @Component({
   selector: 'app-serach-inputs',
-  imports: [RxjsSearch],
+  imports: [RxjsSearch, SignalSearch],
   templateUrl: './serach-inputs.html',
   styleUrl: './serach-inputs.css',
 })

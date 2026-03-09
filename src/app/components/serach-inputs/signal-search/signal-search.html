@@ -1,0 +1,27 @@
+<section class="input-section">
+  <h3>Signal Search => BE side filtering</h3>
+  <h4>Code example:</h4>
+  <pre><code>this.searchText$ = fromEvent(this.inputElement.nativeElement, 'input').pipe(
+      map((event) => (event.target as HTMLInputElement).value),
+      debounceTime(300),
+      distinctUntilChanged(),
+      switchMap((searchText) => this.mockApiCall(searchText)),
+    );
+</code></pre>
+  <h4>Input example:</h4>
+  <label>
+    Search:
+    <input
+      type="text"
+      (input)="onSearchUpdated($event)"
+      [value]="searchQuery()"
+      class="search-input"
+    />
+  </label>
+  <h3>Results:</h3>
+  <ul>
+    @for (item of filteredItems(); track $index) {
+      <li>{{ item }}</li>
+    }
+  </ul>
+</section>
