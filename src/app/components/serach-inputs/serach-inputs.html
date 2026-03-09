@@ -1,14 +1,1 @@
-<section class="input-section">
-  <h3>RXJS Search</h3>
-  <h4>Code example:</h4>
-  <pre><code>this.searchText$ = fromEvent(this.inputElement.nativeElement, 'input').pipe(
-      map((event) => (event.target as HTMLInputElement).value),
-      debounceTime(300),
-      distinctUntilChanged(),
-      switchMap((searchText) => this.mockApiCall(searchText)),
-    );
-</code></pre>
-  <h4>Input example:</h4>
-  <input type="text" placeholder="Search..." class="search-input" #searchInput />
-  <p>ApiResultSubject: {{ apiCallResult$ | async }}</p>
-</section>
+<app-rxjs-search></app-rxjs-search>
