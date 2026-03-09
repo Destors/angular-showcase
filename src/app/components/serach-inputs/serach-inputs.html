@@ -1,7 +1,4 @@
-<input type="text" placeholder="Search..." #searchInput />
-<p>ApiCall: {{ apiCallResult }}</p>
+<h3>RXJS Search</h3>
+<input type="text" placeholder="Search..." class="search-input" #searchInput />
+<p>ApiResultSubject: {{ apiCallResult$ | async }}</p>
 <br />
-
-<label for="name">Name (4 to 8 characters):</label>
-
-<input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10" />
